@@ -1,0 +1,55 @@
+{% extends 'templates/master.twig' %}
+
+{% set slug = 'protocol' %}
+{% set title = 'Protocol' %}
+
+{% block content %}
+  <section>
+    <header>
+      <h1>EagleNet Protocol</h1>
+    </header>
+
+    <h1>Two Minutes Before Start</h1>
+    <p>CQ, CQ – This is {{ callsign }}. My name is {{ name }} and I’ll be net control for the Eagle Net – which will start in about 2 minutes.  stations wishing to use this frequency should do so now.</p>
+    <p>Again, the Eagle Net – the National Traffic System net for West Central Florida – will start in about 2 minutes. This is {{ callsign }} monitoring.</p>
+
+    <h1>Start The Net At 8:30pm</h1>
+    <p>CQ the net. CQ the West Central Florida Eagle Net – this is {{ callsign }}. my name is {{ name }} – and i’ll be your net control for tonight’s session of the Eagle Net.</p>
+    <p>Before we commence, are there any stations with emergency or priority traffice?  *unkey* are there any relays of emergency or priority traffic?</p>
+    <p>The Eagle Net is the National Traffic Net for the West Central Florida section of the ARRL. This net meets daily at 8:30 pm local time for the purpose of exchanging formal written traffic and in practice of good amateur radio communications. All amateurs are invited and encouraged to check into the net using the linked NI4CE repeater system. for information about this linked repeater system including a list of frequencies and a coverage map – please visit www.NI4CE.org. Wait. <span>Unkey to reset repeaters</span></p>
+    <p>Please remember, the NI4CE repeater system requires a pl tone of 100 Hertz – and being linked repeaters have a transmit delay, so when checking in, first key up the mic. – wait about a second – then begin speaking.</p>
+    <p>This is a controlled net, so direct all calls to net control. <span>unkey to reset repeaters</span></p>
+
+    <h1>NTS Liasons</h1>
+    <p>Are there any NTS net liaisons – coming from or going to another net? are there any stations with formal written traffic?<span>with no outgoing traffic nts liaison stations are released.</span></p>
+
+    <h1>Section Officials</h1>
+    <p>Are there any ARRL section officials (that is the section manager and his cabinet appointees) on frequency?</p>
+
+    <h1>Station Level Appointees</h1>
+    <p>Are there any ARRL station level appointees on frequency.  (station-level appointees include technical specialists, official relay stations, and official emergency stations.)</p>
+
+    <h1>Announcements Or Bulletins</h1>
+    <p>Are there any stations with announcements or bulletins for the net?</p>
+
+    <h1>General Check-ins</h1>
+    <p>This is {{ callsign }}. Now that we have completed the business of traffic, we will proceed with general check-ins. Again, come slowly, stating your call sign in standard phonetics, followed by your name and location. Please state whether you have traffic for the net.</p>
+    <p>Net Control will acknowledge each station individually, so please wait until Net Control has acknowledged the prior station before transmitting.</p>
+
+    <h1>Mobile Stations</h1>
+    <p>We will begin with any mobile stations.  once again are there any mobile stations?</p>
+    <p>Now we are looking for <strong>Charlotte and Desoto</strong> counties.  Charlotte and Desoto county stations, please come now.  repeat.</p>
+    <p>We are now looking for <strong>Hardee and Highlands</strong> county stations. Hardee and Highlands county stations, please come now.  Repeat.</p>
+    <p>This is {{ callsign }}, Net Control, looking for <strong>Hillsborough</strong> county stations.  Hillsborough county stations, please come now.  repeat.</p>
+    <p>Now we are looking for Manatee county stations.  Manatee county stations, please check-in now. repeat.</p>
+    <p>Moving on to <strong>Pasco, Hernando, and Northern</strong> county stations.  Calling Pasco, Hernando, and Northern county stations for Eagle Net.  repeat.</p>
+    <p><strong>Pinellas</strong> county stations please come now.  Repeat.</p>
+    <p>Now we are looking for <strong>Polk County</strong>. Your Net Control this evening, {{ callsign }}, is from Polk County. Are there any other Polk stations, please check-in now. Repeat.</p>
+    <p>And now we will take <strong>Sarasota</strong> county stations.  Sarasota county stations for Eagle Net, please come now. Repeat.</p>
+    <p>This concludes our county roll call. This is {{ callsign }}, your Net Control taking check-ins from any station anywhere for Eagle Net. Repeat.</p>
+
+    <h1>Closing</h1>
+    <p>I want to thank the xx stations who checked into tonight’s session.  We would like to thank everyone for their participation in Eagle Net.  additionally, we would like to thank the West Central Florida Group, Inc. for the use of the repeater system.  I will now close this session of the Eagle Net at {{ time }} and return the repeaters to normal amateur use.</p>
+    <p>This is {{ callsign }} clear.</p>
+  </section>
+{% endblock %}

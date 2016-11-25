@@ -1,0 +1,21 @@
+{% extends 'templates/master.twig' %}
+
+{% set slug = 'announcements' %}
+{% set title = 'Announcements' %}
+
+{% block content %}
+  <section>
+    <header>
+      <h1>Announcements</h1>
+    </header>
+    {% for announcement in announcements %}
+      <section>
+        <header>
+          <h1>{{ announcement.title }}</h1>
+          <small>{{ announcement.date_created }}</small>
+        </header>
+        <p>{{ announcement.content }}</p>
+      </section>
+    {% endfor %}
+  </section>
+{% endblock %}

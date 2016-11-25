@@ -1,0 +1,8 @@
+dist/
+pre/
+node_modules/
+data.json
+app/config.json
+composer.lock
+composer.phar
+\.fuse_hidden*

@@ -1,0 +1,28 @@
+{% extends 'templates/master.twig' %}
+
+{% set slug = 'net_controls' %}
+{% set title = 'Net Control List' %}
+
+{% block content %}
+  <section>
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>Callsign</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for station in net_controls %}
+        <tr>
+          <td>{{ station.callsign }}</td>
+          <td>{{ station.name }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+{% endblock %}

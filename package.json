@@ -1,0 +1,43 @@
+{
+  "name": "eaglenet.online",
+  "version": "1.0.0",
+  "description": "EagleNet Online: information about the EagleNet",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevashcraft/eaglenet.online.git"
+  },
+  "keywords": [
+    "amateur",
+    "radio",
+    "eaglenet",
+    "ham",
+    "nts"
+  ],
+  "author": "Kevin Ashcraft (https://kevashcraft.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevashcraft/eaglenet.online/issues"
+  },
+  "homepage": "https://github.com/kevashcraft/eaglenet.online#readme",
+  "devDependencies": {
+    "crypto": "0.0.3",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-cli": "^1.2.2",
+    "gulp-debug": "^3.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-minify": "0.0.14",
+    "gulp-sass": "^2.3.2",
+    "gulp-twig": "^0.7.0",
+    "gulp-vulcanize": "^6.1.0",
+    "gulp-watch": "^4.3.11",
+    "manage-database": "^0.2.1",
+    "rimraf": "^2.5.4"
+  }
+}
