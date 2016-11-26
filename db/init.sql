@@ -17,5 +17,18 @@ INSERT INTO schedule (day, ncs_id) VALUES
 INSERT INTO announcements (title, content) VALUES
 ('Test', 'This is just a test announcement. Please od not announce');
 
-INSERT INTO arrl_officials (callsign, name, title) VALUES
-('KT4WX', 'Daryll', 'Section Manager');
+INSERT INTO arrl_officials (title, name, callsign) VALUES
+('Section Manager', 'Darrell', 'KT4WX'),
+('Assistant Section Manager', 'Ben', 'KI4IGX'),
+('Assistant Section Manager', 'Randy', 'K4EZM'),
+('Assistant Section Manager', 'Biff', 'K4LAW'),
+('Assistant Section Manager', 'Judson', 'KJ4IDH'),
+('Assistant Section Manager', 'Dee', 'N4GD'),
+('Assistant Section Manager', 'Geoff', 'N1GY'),
+('Official Observer Coordinator', 'Dennis', 'W4DG'),
+('Affiliated Club''s Coordinator', 'VACANT', null),
+('Public Information Coordinator', 'VACANT', null),
+('Section Emergency Coordinator', 'Ben', 'KI4IGX'),
+('Section Traffic Manager', 'Doug', 'N2DW'),
+('Section Youth Coordinator', 'Christine', 'KK4KJN'),
+('Technical Coordinator', 'Geoff', 'N1GY');

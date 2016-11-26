@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS net_controls;
+DROP TABLE IF EXISTS net_controls CASCADE;
 CREATE TABLE net_controls (
   id serial NOT NULL,
   created timestamp DEFAULT current_timestamp NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE net_controls (
   PRIMARY KEY(id)
 );
 
-DROP TABLE IF EXISTS schedule;
+DROP TABLE IF EXISTS schedule CASCADE;
 CREATE TABLE schedule (
   id serial NOT NULL,
   created timestamp DEFAULT current_timestamp NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE schedule (
   PRIMARY KEY(id)
 );
 
-DROP TABLE IF EXISTS announcements;
+DROP TABLE IF EXISTS announcements CASCADE;
 CREATE TABLE announcements (
   id serial NOT NULL,
   created timestamp DEFAULT current_timestamp NOT NULL,
@@ -28,7 +28,7 @@ CREATE TABLE announcements (
   PRIMARY KEY(id)
 );
 
-DROP TABLE IF EXISTS arrl_officials;
+DROP TABLE IF EXISTS arrl_officials CASCADE;
 CREATE TABLE arrl_officials (
   id serial NOT NULL,
   created timestamp DEFAULT current_timestamp NOT NULL,

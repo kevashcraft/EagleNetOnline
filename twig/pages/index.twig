@@ -4,10 +4,5 @@
 {% set title = site.title ~ ': Announcements, Schedule and Net Protocol' %}
 
 {% block content %}
-  <section>
-    <header>
-      <h1>Welcome to the Net</h1>
-    </header>
-    <p>Hello Net Control Stations and welcome to the EagleNet Online, a resource to quickly access the <a href="/announcements">announcements</a>, <a href="/schedule">schedule</a>, <a href="/protocol">net protocol</a>, list of <a href="/net-control-stations">net control stations</a>, list of <a href="/arrl-section-officials">ARRL section officials</a>, and <a href="/statistics">net reports</a>.</p>
-  </section>
+  {% include 'pages/index_content.twig' %}
 {% endblock %}

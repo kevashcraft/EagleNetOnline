@@ -1,0 +1,23 @@
+<section>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Callsign</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for station in net_controls %}
+        <tr>
+          <td>{{ station.callsign }}</td>
+          <td>{{ station.name }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

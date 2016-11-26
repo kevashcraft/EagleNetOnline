@@ -1,6 +1,7 @@
 dist/
 pre/
 node_modules/
+submodules/
 data.json
 app/config.json
 composer.lock

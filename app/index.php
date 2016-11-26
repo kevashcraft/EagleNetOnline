@@ -38,7 +38,7 @@ $sql = "SELECT * FROM net_controls ORDER BY callsign ASC";
 $stm = $db->query($sql);
 $data->net_controls = $stm->fetchAll(PDO::FETCH_OBJ);
 
-$sql = "SELECT * FROM arrl_officials ORDER BY callsign ASC";
+$sql = "SELECT * FROM arrl_officials ORDER BY id ASC";
 $stm = $db->query($sql);
 $data->arrl_officials = $stm->fetchAll(PDO::FETCH_OBJ);
 

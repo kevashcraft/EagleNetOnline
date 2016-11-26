@@ -1,0 +1,8 @@
+<div id="home">
+  {% include 'pages/index_content.twig' %}
+</div>
+{% for page in pages %}
+<div id="{{ page }}">
+  {% include 'pages/' ~ page ~ '/index_content.twig' %}
+</div>
+{% endfor %}

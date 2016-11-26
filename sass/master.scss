@@ -1,6 +1,10 @@
 $font-stack: Helvetica;
 $primary-color: rgba(96,125,139 ,1);
 $background-color: #FFF;
+$accent-color: rgba(38,166,154 ,1);
+$accent-color-light: rgba(224,242,241 ,1);
+$accent-color-dark: rgba(0,137,123 ,1);
+$text-color: #000;
 
 @import 'reset';
 @import 'base';

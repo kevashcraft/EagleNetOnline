@@ -1,33 +1,327 @@
 html {
   height: 100%;
+  font-size: 24px;
+  font-family: $font-stack;
 }
 
 body {
   height: 100%;
   background: $background-color;
-  overflow: hidden;
+  z-index: 1;
 }
 
 body > header {
-  width: 25%;
-  float: left;
-  background: blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  z-index: 1;
+}
+
+body > header > div {
+  padding: 45px 15px 0;
+}
+
+body > header h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+body > header a {
+  border-bottom: none;
+  transition: color .2s ease;
+}
+
+body > header > div > div > a {
+  line-height: 40px;
+  display: none;
+}
+
+body > header > div > div > a img {
+  vertical-align: middle;
+}
+
+body > header nav {
+  padding: 10px 5px;
+}
+
+body > header nav li {
+  margin: 15px 0 0 15px;
+}
+
+body > header nav ul a:hover {
+  color: $accent-color-dark;
+}
+
+body > header nav ul .active {
+  color: $accent-color;
+}
+
+body > header nav > a {
+  position: relative;
+  cursor: pointer;
+  display: none;
 }
 
 body > div {
-  width: 75%;
-  float: right;
-  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 250px;
+  right: 0;
+  z-index: 2;
+  // padding-bottom: 250px;
   min-height: 100%;
-  max-height: 100%;
-  background: orange;
+}
+
+#content {
+  padding: 35px;
+  padding-bottom: 650px;
+}
+
+#content section header {
+  padding: 25px;
+}
+
+#content section header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#content section > div h1 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 5px 15px;
+}
+
+#content section > div p {
+  margin: 1em;
+  line-height: 1.5em;
+}
+
+#content section table {
+  width: 100%;
+  text-align: left;
+}
+#content section table th {
+  padding-bottom: 25px;
+}
+
+#content section table td {
+  padding: 5px;
 }
 
 body > div > footer {
-  padding-top: 150px;
+  position: absolute;
+  left: -250px;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0, .7);
+  color: white;
+  z-index: 3;
 }
+
+body > div > footer a {
+  color: white;
+}
+
 body > div > footer > div:first-of-type {
-  padding-top: 45px;
+  padding: 45px 15px;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+body > div > footer > div:last-of-type {
+  line-height: 1.3rem;
+  font-size: .8rem;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+body > div > footer header {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+body > div > footer section {
+  width: 30%;
+  min-width: 150px;
+  flex-shrink: 0;
+  margin: 15px 0;
+}
+
+body > div > footer section li {
+  margin: 5px;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+  border-bottom: 1px solid $accent-color-light;
+  transition: border-color .3s ease;
+}
+
+a:hover {
+  border-color: $accent-color-dark;
+}
+
+[hidden] { display: none; }
+strong { font-weight: bold; }
+
+@media (max-width: 996px) {
+
+  body > header {
+    width: 250px;
+  }
+
+  body > header h1 {
+    font-weight: normal;
+  }
+
+  body > header > div {
+    padding: 50px 0 0 5px;
+  }
+
+  body > header nav li {
+    margin: 15px 0 0 5px;
+  }
+
+  body > div {
+    width: calc(100% - 250px);
+  }
+
+  #content {
+    padding: 5px;
+  }
+
+  #content section header {
+    padding: 15px;
+  }
+
+  #content section > h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0 0 15px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 21px;
+  }
+
+  body > header {
+    height: 45px;
+    width: 100%;
+    box-shadow: 0 0 5px 2px #424242;
+    background: $background-color;
+    z-index: 3;
+  }
+
+  body > header h1 {
+    font-weight: normal;
+    line-height: 45px;
+    margin-left: 15px;
+  }
+
+  body > header > div {
+    padding: 0;
+  }
+
+  body > header > div > div {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 225px;
+    padding: 0;
+    text-align: right;
+  }
+
+  body > header > div > div > a {
+    display: block;
+  }
+
+  body > header nav ul {
+    margin: 0;
+    padding: 15px;
+  }
+
+  body > header nav {
+    position: absolute;
+    right: 5px;
+    top: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background: $background-color;
+    transition: box-shadow .8s ease, max-height .6s ease;
+    padding: 0;
+  }
+
+  body > header > div > div:hover nav {
+    box-shadow: 2px 2px 2px 1px #424242;
+    max-height: 400px;
+  }
+
+  body > header nav > a {
+    display: block;
+  }
+
+  body > header ul {
+    margin: 15px;
+  }
+
+  body > header nav li {
+    margin: 10px 0 0 5px;
+  }
+
+  body > div {
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding-top: 50px;
+    // padding-bottom: 550px;
+  }
+
+  #content {
+    padding: 5px;
+    padding-bottom: 650px;
+  }
+
+  #content section header {
+    padding: 15px;
+  }
+
+  #content section > div {
+    padding: 15px;
+  }
+
+  #content section > h1 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 5px 0 0 15px;
+  }
+
+  body > div > footer {
+    left: 0;
+  }
+
+  body > div > footer h1 {
+    font-size: .8rem;
+  }
+
+  body > div > footer a {
+    font-size: .8rem;
+  }
+
+  // body > div > footer > div:first-of-type {
+  //   flex-direction: column;
+  //   align-items: center;
+  //   padding: 25px 35px;
+  // }
+
+  // body > div > footer > div:first-of-type section {
+  //   display: block;
+  //   margin: 1rem;
+  // }
 }

@@ -1,0 +1,16 @@
+<section>
+  <header>
+    <h1>Announcements</h1>
+  </header>
+  <div>
+    {% for announcement in announcements %}
+      <section>
+        <header>
+          <h1>{{ announcement.title }}</h1>
+          <small>{{ announcement.date_created }}</small>
+        </header>
+        <p>{{ announcement.content }}</p>
+      </section>
+    {% endfor %}
+  </div>
+</section>

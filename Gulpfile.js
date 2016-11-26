@@ -10,11 +10,20 @@ var minifyHTML = require('gulp-htmlmin');
 var vulcanize = require('gulp-vulcanize');
 var fs = require('fs');
 var exec = require('child_process').exec;
+var pages = [
+  'announcements',
+  'schedule',
+  'protocol',
+  'net-control-stations',
+  'arrl-section-officials',
+];
 
 var prod = false;
-// prod = true;
+prod = true;
 
 var abspath = prod ? '/home/kevin/dev/eaglenet.online/pre' : '';
+
+
 
 gulp.task('clean', function(cb) {
   del('pre');
@@ -32,6 +41,7 @@ gulp.task('data', ['clean'], function(cb) {
 gulp.task('render', ['data'], function() {
   'use strict';
   data.abspath = abspath;
+  data.pages = pages;
   var stream = gulp.src('./twig/pages/**/*.twig')
     .pipe(twig({
       errorLogToConsole: true,
@@ -73,6 +83,7 @@ gulp.task('vulcanize', ['minify-js'], function() {
   .pipe(gulpif(prod, vulcanize({
     abspath: '',
     inlineCss: true,
+    inlineScripts: true,
   })))
   .pipe(gulp.dest('dist'));
 
@@ -81,6 +92,7 @@ gulp.task('vulcanize', ['minify-js'], function() {
     gulp.src('pre/**/*.js').pipe(gulp.dest('dist'));
   }
 
+  gulp.src(['static/**/*', 'static/**/.*']).pipe(gulp.dest('dist'));
   return stream;
 })
 

@@ -1,0 +1,27 @@
+<section>
+  <header>
+    <h1>Net Schedule</h1>
+  </header>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>Day of the Week</th>
+          <th>Net Control Station</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for day in schedule %}
+        <tr>
+          <td>{{ day.day }}</td>
+          {% if day.email is empty %}
+          <td>{{ day.callsign }} - {{ day.name }}</td>
+          {% else %}
+          <td><a href="mailto:{{ day.email }}" title="{{ day.email }}">{{ day.callsign }} - {{ day.name }}</a></td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
